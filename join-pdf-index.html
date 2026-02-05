@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unir PDFs</title>
+<link rel="stylesheet" href="join-pdf-style.css">
+</head>
+
+<body>
+
+<div id="card">
+    <div class="title">
+        <h1>Unir PDFs</h1>
+        <p>Se unirán según el número del nombre</p>
+    </div>
+
+    <input id="outputName" type="text" placeholder="Nombre del PDF final (ej. documento.pdf)">
+
+    <div id="dropzone">
+        <strong>Cargar PDFs</strong>
+        o arrastra y suelta aquí
+    </div>
+
+    <input id="fileInput" type="file" multiple accept="application/pdf">
+
+    <div id="fileList"></div>
+
+    <button id="mergeBtn" style="display:none">Unir y descargar</button>
+    <button id="clearBtn" class="secondary" style="display:none">Limpiar</button>
+</div>
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="join-pdf-script.js"></script>
+</body>
+</html>
