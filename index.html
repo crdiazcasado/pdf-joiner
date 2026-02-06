@@ -6,29 +6,35 @@
 <title>Unir PDFs</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <div id="card">
     <div class="title">
         <h1>Unir PDFs</h1>
         <p>Se unirán según el número del nombre</p>
     </div>
-
-    <input id="outputName" type="text" placeholder="Nombre del PDF final (ej. documento.pdf)">
+    
+    <div class="config">
+        <div id="controls">
+            <div class="size">
+                <p>Nombre del PDF final:</p>
+                <input id="outputName" type="text" placeholder="Ej. documento.pdf">
+            </div>
+        </div>
+    </div>
 
     <div id="dropzone">
         <strong>Cargar PDFs</strong>
         o arrastra y suelta aquí
     </div>
-
     <input id="fileInput" type="file" multiple accept="application/pdf">
-
-    <div id="fileList"></div>
-
-    <button id="mergeBtn" style="display:none">Unir y descargar</button>
-    <button id="clearBtn" class="secondary" style="display:none">Limpiar</button>
+    
+    <div id="actions">
+        <button id="mergeBtn">Unir y descargar</button>
+        <button id="clearBtn" class="secondary">Limpiar</button>
+    </div>
 </div>
+
+<div id="fileList"></div>
 
 <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 <script src="script.js"></script>
